@@ -25,22 +25,24 @@ PREFIX .
 
 .help
 
-status      :           Discord info
-games       :           Games to play
-google      :           Google Search
-onlinecheck :           onlinecheck user
-slowmode    :           slowmode seconds
-md5hash     :           md5hash text  
-getip       :           getip site.com       
-kick        :           kick user message 
-ban         :           ban user duration message
-tban        :           tban user duration message
-unban       :           unban user
-mute        :           mute user
-invite      :           invite duration
-mods        :           list all mods
-admins      :           list all admins
-recon       :           recon site.com
+status        :           Discord info
+games         :           Games to play
+google        :           Google Search
+onlinecheck   :           onlinecheck user
+slowmode      :           slowmode seconds
+md5hash       :           md5hash text  
+getip         :           getip site.com       
+kick          :           kick user message 
+ban           :           ban user duration message
+tban          :           tban user duration message
+unban         :           unban user
+mute          :           mute user
+invite        :           invite duration
+mods          :           list all mods
+admins        :           list all admins
+recon         :           recon site.com
+announcements :           announcements message
+ticket        :           ticket category message
 
 ```
 
