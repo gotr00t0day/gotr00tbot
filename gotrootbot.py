@@ -21,7 +21,7 @@ from googlesearch import search
 from mcstatus import MinecraftServer
 from fake_useragent import UserAgent
 
-token = "NzIwNDc1NTUzMjMyMDYwNDU3.XuqCyg.QyfocA5zUSgJh2WMj0rA9F6LdQQ"
+token = ""
 
 client = commands.Bot(command_prefix='.')
 
