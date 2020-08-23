@@ -8,7 +8,7 @@
 
 git clone https://github.com/gotr00t0day/gotr00tbot.git
 
-pip3 innstall -r requirements.txt
+pip3 install -r requirements.txt
 
 cd gotrootbot
 
