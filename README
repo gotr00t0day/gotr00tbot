@@ -1,0 +1,18 @@
+# INSTALLATION
+
+```bash
+
+git clone https://github.com/gotr00t0day/gotr00tbot.git
+
+pip install -U git+https://github.com/Rapptz/discord.py@rewrite
+
+cd gotrootbot
+
+python3 gotrootbot.py
+
+```
+
+## USAGE
+
+.help
+
