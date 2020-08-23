@@ -29,7 +29,7 @@ client.remove_command('help')
 
 
 
-# AUTHOR
+# AUTHOR (c0deNinja - gotr00tbot v1.0)
 
 @client.command(name="author")
 async def _author(ctx):
