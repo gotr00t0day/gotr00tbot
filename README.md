@@ -46,3 +46,11 @@ ticket        :           ticket category message
 
 ```
 
+# TICKET SYSTEM
+
+```
+If you ever use the ticket system code for your bot please give me some credit, thank you
+```
+
+![alt text](https://github.com/gotr00t0day/gotr00tbot/blob/master/img/ticketsystem.png)
+
