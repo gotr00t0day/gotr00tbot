@@ -1,3 +1,5 @@
+![alt text](https://github.com/gotr00t0day/gotr00tbot/blob/master/img/gotrootbot.png)
+
 [![HitCount](http://hits.dwyl.com/gotr00t0day/gotr00tbot.svg)](http://hits.dwyl.com/gotr00t0day/gotr00tbot)
 
 # INSTALLATION
