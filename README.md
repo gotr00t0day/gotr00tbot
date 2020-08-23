@@ -8,7 +8,7 @@
 
 git clone https://github.com/gotr00t0day/gotr00tbot.git
 
-pip install -U git+https://github.com/Rapptz/discord.py@rewrite
+pip3 innstall -r requirements.txt
 
 cd gotrootbot
 
