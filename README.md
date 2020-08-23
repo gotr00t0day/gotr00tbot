@@ -1,3 +1,5 @@
+[![HitCount](http://hits.dwyl.com/gotr00t0day/gotr00tbot.svg)](http://hits.dwyl.com/gotr00t0day/gotr00tbot)
+
 # INSTALLATION
 
 ```bash
