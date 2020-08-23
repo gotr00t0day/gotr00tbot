@@ -1,0 +1,6 @@
+requests
+asyncio
+translate
+builtwith
+googlesearch
+fake_useragent
