@@ -26,6 +26,7 @@ intents = discord.Intents.default()
 
 intents.members = True
 intents.message_content = True
+intents.presences = True
 
 client = commands.Bot(command_prefix='.', intents=intents)
 
@@ -33,7 +34,7 @@ client.remove_command('help')
 
 
 
-# AUTHOR (c0deNinja - gotr00tbot v1.0)
+# AUTHOR (c0deNinja - gotr00tbot v1.1)
 
 @client.command(name="author")
 async def _author(ctx):
