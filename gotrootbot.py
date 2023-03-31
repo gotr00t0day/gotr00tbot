@@ -18,12 +18,16 @@ from urllib.parse import urlencode
 from discord.ext.commands import Bot
 from discord.ext import commands
 from googlesearch import search
-from mcstatus import MinecraftServer
 from fake_useragent import UserAgent
 
 token = ""
 
-client = commands.Bot(command_prefix='.')
+intents = discord.Intents.default()
+
+intents.members = True
+intents.message_content = True
+
+client = commands.Bot(command_prefix='.', intents=intents)
 
 client.remove_command('help')
 
@@ -39,7 +43,7 @@ async def _author(ctx):
             colour = discord.Colour.blue()
         )
         embed.set_footer(text='Developer, Programmer, Hacker')
-        file = discord.File("img\\hacker.jpg", filename="hacker.jpg")
+        file = discord.File("img/hacker.jpg", filename="hacker.jpg")
         embed.set_image(url='attachment://hacker.jpg')
         await ctx.send(file=file, embed=embed)
 
@@ -200,7 +204,7 @@ async def _mods(ctx):
                 mods.append(str(member))
     moderators = [i.split('#', 1)[0] for i in mods]
     embed = discord.Embed(colour = discord.Colour.blue())
-    file = discord.File("img\\mods.png", filename="mods.png")
+    file = discord.File("img/mods.png", filename="mods.png")
     embed.set_thumbnail(url='attachment://mods.png')
     embed.add_field(name='Mods', value="▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬", inline=False)
     embed.add_field(name='Mod', value=moderators[0], inline=True)
@@ -210,8 +214,6 @@ async def _mods(ctx):
     embed.add_field(name='Mod', value=moderators[4], inline=True)
     embed.add_field(name='Mod', value=moderators[5], inline=True)
     embed.add_field(name='Mod', value=moderators[6], inline=True)
-    embed.add_field(name='Mod', value=moderators[7], inline=True)
-    embed.add_field(name='Mod', value=moderators[8], inline=True)
     await ctx.send(file=file, embed=embed)
 
 # LIST ALL ADMINS
@@ -305,7 +307,7 @@ async def _sorteocolor(ctx):
 async def _md5hash(ctx, *, arg):
     hash_object = hashlib.md5(arg.encode())
     md5 = hash_object.hexdigest()
-    file = discord.File("img\\root.png", filename="root.png")
+    file = discord.File("img/root.png", filename="root.png")
     embed = discord.Embed(colour = discord.Colour.blue())
     embed.set_thumbnail(url='attachment://root.png')
     embed.set_author(name="IP ADDRESS") 
@@ -321,7 +323,7 @@ async def _md5hash(ctx, *, arg):
 async def _getipaddress(ctx, *, arg):
     try:
         ip = socket.gethostbyname(arg)
-        file = discord.File("img\\root.png", filename="root.png")
+        file = discord.File("img/root.png", filename="root.png")
         embed = discord.Embed(colour = discord.Colour.blue())
         embed.set_thumbnail(url='attachment://root.png')
         embed.set_author(name="IP ADDRESS") 
@@ -329,7 +331,7 @@ async def _getipaddress(ctx, *, arg):
         embed.add_field(name='IP', value=ip, inline=False)
         await ctx.send(file=file, embed=embed)
     except socket.error:
-        file = discord.File("img\\root.png", filename="root.png")
+        file = discord.File("img/root.png", filename="root.png")
         embed = discord.Embed(colour = discord.Colour.blue())
         embed.set_thumbnail(url='attachment://root.png')
         embed.set_author(name="IP ADDRESS") 
@@ -378,7 +380,7 @@ async def _ideas(ctx, *, site):
         title = 'reconnaissance',
         colour = discord.Colour.blue()
     )
-    file = discord.File("img\\recon.png", filename="recon.png")
+    file = discord.File("img/recon.png", filename="recon.png")
     embed.set_footer(text='gotr00t?')
     embed.set_thumbnail(url='attachment://recon.png')
     embed.add_field(name='Target', value=site, inline=False)
@@ -417,7 +419,7 @@ async def _statusdis(ctx):
     totalusers = online
     idleusers = idle 
 
-    file = discord.File("img\\root.png", filename="root.png")
+    file = discord.File("img/root.png", filename="root.png")
     embed = discord.Embed(colour = discord.Colour.blue())
     embed.set_thumbnail(url='attachment://root.png')
     embed.set_author(name="STATUS DISCORD") 
@@ -438,7 +440,7 @@ async def _help(ctx):
         description='HELP MENU', 
         colour = discord.Colour.blue()
     )
-    file = discord.File("img\\root.png", filename="root.png")
+    file = discord.File("img/root.png", filename="root.png")
     embed.set_footer(text='gotr00t?')
     embed.set_thumbnail(url='attachment://root.png')
     embed.add_field(name='status', value="Discord info", inline=False)
