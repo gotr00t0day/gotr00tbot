@@ -239,18 +239,21 @@ async def _admins(ctx):
 # ONLINE
 
 @client.command(name='onlinecheck')
-async def _massmute(ctx, *, arg):
+async def _checkuser(ctx, *, arg: discord.User):
     online = []
-    for member in client.get_all_members():
-        if str(member.status) != "offline":
-            online.append(str(member))
-    checkonline = [i.split('#', 1)[0] for i in online]
-    result = arg.startswith(tuple(checkonline))
-    if result == True:
+    for guild in client.guilds:
+        for member in guild.members:
+            if str(member.status) != "offline":
+                online.append(f"{str(member)}")
+    checkonline = [i for i in online]
+    user = []
+    for i in checkonline:
+        if str(arg) in i:
+            user.append(arg)
+    if user:
         await ctx.send(f"{arg} is **online**")
-    elif result == False:
+    else:
         await ctx.send(f"{arg} is **offline**")
-
 
                    
 
